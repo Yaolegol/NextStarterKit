@@ -5,6 +5,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
+    "next": "^10.0.7",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-intl": "^5.10.6",
@@ -76,6 +77,9 @@
     "build": "webpack --mode production",
     "flow": "flow",
     "heroku-prebuild": "cd ./server && npm i",
+    "next:dev": "next dev",
+    "next:build": "next build",
+    "next:start": "next start",
     "start": "webpack-dev-server",
     "style:lint": "npx stylelint **/*.less",
     "test": "echo \"Error: no test specified\" && exit 1"
