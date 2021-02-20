@@ -1,0 +1,40 @@
+@import (reference) '~styles/adaptive';
+
+.admin-order-item {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+    @media @laptop {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    @media @mobile {
+        grid-auto-rows: minmax(min-content, max-content);
+        grid-template-columns: none;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    &__data-description {
+        display: none;
+
+        @media @mobile {
+            display: initial;
+        }
+    }
+
+    &__image {
+        height: 275px;
+        object-fit: cover;
+        width: 275px;
+
+        @media @laptop {
+            display: none;
+        }
+
+        @media @mobile {
+            display: initial;
+        }
+    }
+}

@@ -1,11 +1,29 @@
 {
-  "name": "nextstarterkit",
-  "version": "1.0.0",
+  "author": "Oleg",
+  "bugs": {
+    "url": "https://github.com/Yaolegol/NextStarterKit/issues"
+  },
+  "dependencies": {
+  },
   "description": "",
-  "main": "index.js",
+  "devDependencies": {
+
+  },
+  "homepage": "https://github.com/Yaolegol/NextStarterKit",
+  "license": "ISC",
+  "main": "./src/index.jsx",
+  "name": "concrete",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yaolegol/NextStarterKit.git"
+  },
   "scripts": {
+    "build": "webpack --mode production",
+    "flow": "flow",
+    "heroku-prebuild": "cd ./server && npm i",
+    "start": "webpack-dev-server",
+    "style:lint": "npx stylelint **/*.less",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Oleg",
-  "license": "ISC"
+  "version": "1.0.0"
 }

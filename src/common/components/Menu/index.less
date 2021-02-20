@@ -1,0 +1,13 @@
+@import (reference) '~styles/colors';
+
+.menu {
+    display: flex;
+
+    &__link {
+        &_active {
+            .menu-item {
+                background-color: @blue;
+            }
+        }
+    }
+}
