@@ -4,7 +4,6 @@ import {
     actionGetProducts,
     actionSetProductsFilter,
 } from "modules/Shop/actions";
-import { PriceFilter } from "modules/Shop/components/Filters/PriceFilter";
 import React, { useCallback, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import { useDispatch } from "react-redux";
@@ -39,14 +38,6 @@ export const Filters = (): React$Node => {
             <h6>
                 <FormattedMessage id="common.filters" />
             </h6>
-            <div className="shop-page-filters__container">
-                <PriceFilter
-                    initialValues={[0, 10000]}
-                    max={10000}
-                    onChange={onPriceFilterChange}
-                    values={priceFilterValue}
-                />
-            </div>
         </div>
     );
 };
