@@ -1,0 +1,1 @@
+{"ast":null,"code":"export var LOCALE_ACTION_TYPES = {\n  SET_LOCALE: \"LOCALE__SET_LOCALE\"\n};","map":null,"metadata":{},"sourceType":"module"}

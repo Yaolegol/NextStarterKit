@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { createSelector } from \"reselect\";\n\nvar getMobileMenuState = function getMobileMenuState(state) {\n  return state.mobileMenu;\n};\n\nexport var selectMobileMenuShowStatus = createSelector([getMobileMenuState], function (_ref) {\n  var isShow = _ref.isShow;\n  return isShow;\n});","map":null,"metadata":{},"sourceType":"module"}

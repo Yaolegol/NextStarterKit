@@ -1,0 +1,1 @@
+{"ast":null,"code":"import React from \"react\";\nimport \"./index.less\";\nexport var CustomLink = function CustomLink(_ref) {\n  var children = _ref.children,\n      url = _ref.url;\n  return /*#__PURE__*/React.createElement(\"a\", {\n    className: \"link\",\n    href: url\n  }, children);\n};","map":null,"metadata":{},"sourceType":"module"}

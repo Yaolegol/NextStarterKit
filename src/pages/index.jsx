@@ -1,8 +1,8 @@
 // @flow
 import {Layout} from "common/components/Layout";
-import {Description} from "pages/Main/Description";
-import {Portfolio} from "pages/Main/Portfolio";
-import {Hero} from "pages/Main/Hero";
+import {Description} from "common/pages/Main/Description";
+import {Portfolio} from "common/pages/Main/Portfolio";
+import {Hero} from "common/pages/Main/Hero";
 import {CustomIntl} from "app/components/CustomIntl";
 import React from "react";
 import "styles/index.less";

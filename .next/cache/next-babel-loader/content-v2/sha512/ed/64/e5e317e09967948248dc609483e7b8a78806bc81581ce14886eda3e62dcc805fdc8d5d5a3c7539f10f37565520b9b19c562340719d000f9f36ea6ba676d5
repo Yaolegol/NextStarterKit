@@ -1,0 +1,1 @@
+{"ast":null,"code":"export var logError = function logError(error, where) {\n  console.error(\"where: \".concat(where, \", error: \").concat(error));\n};","map":null,"metadata":{},"sourceType":"module"}

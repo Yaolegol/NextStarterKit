@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { createSelector } from \"reselect\";\n\nvar getLocaleState = function getLocaleState(state) {\n  return state.locale;\n};\n\nexport var selectCurrentLocale = createSelector([getLocaleState], function (_ref) {\n  var currentLocale = _ref.currentLocale;\n  return currentLocale;\n});","map":null,"metadata":{},"sourceType":"module"}

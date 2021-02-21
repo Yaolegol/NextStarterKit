@@ -1,0 +1,1 @@
+{"ast":null,"code":"export var AUTH_ACTION_TYPES = {\n  LOGIN_FAIL: \"AUTH__LOGIN_FAIL\",\n  LOGIN_START: \"AUTH__LOGIN_START\",\n  LOGIN_SUCCESS: \"AUTH__LOGIN_SUCCESS\",\n  LOGOUT: \"AUTH__LOGOUT\",\n  SIGNUP_FAIL: \"AUTH__SIGNUP_FAIL\",\n  SIGNUP_START: \"AUTH__SIGNUP_START\",\n  SIGNUP_SUCCESS: \"AUTH__SIGNUP_SUCCESS\"\n};","map":null,"metadata":{},"sourceType":"module"}

@@ -1,0 +1,1 @@
+{"ast":null,"code":"export var USER_ACTION_TYPES = {\n  GET_USER_FAIL: \"USER__GET_USER_FAIL\",\n  GET_USER_START: \"USER__GET_USER_START\",\n  GET_USER_SUCCESS: \"USER__GET_USER_SUCCESS\"\n};","map":null,"metadata":{},"sourceType":"module"}

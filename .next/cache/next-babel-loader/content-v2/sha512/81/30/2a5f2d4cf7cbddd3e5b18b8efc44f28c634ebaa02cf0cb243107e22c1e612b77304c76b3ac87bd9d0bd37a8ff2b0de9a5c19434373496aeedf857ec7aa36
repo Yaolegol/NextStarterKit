@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { LOCALE_ACTION_TYPES } from \"modules/Locale/constants\";\nvar SET_LOCALE = LOCALE_ACTION_TYPES.SET_LOCALE;\nexport var actionSetLocale = function actionSetLocale(lang) {\n  return function (dispatch, getState) {\n    dispatch({\n      data: lang,\n      type: SET_LOCALE\n    });\n  };\n};","map":null,"metadata":{},"sourceType":"module"}
