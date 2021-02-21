@@ -1,6 +1,5 @@
 // @flow
 import React from "react";
-import { Link } from "react-router-dom";
 import "./index.less";
 
 type TProp = {
@@ -10,8 +9,8 @@ type TProp = {
 
 export const CustomLink = ({ children, url }: TProp): React$Node => {
     return (
-        <Link className="link" to={url}>
+        <a className="link" href={url}>
             {children}
-        </Link>
+        </a>
     );
 };

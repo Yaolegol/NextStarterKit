@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { hot } from "react-hot-loader/root";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-const MainPage = React.lazy(() => import("pages/Main"));
+const MainPage = React.lazy(() => import("pages"));
 const ShopPage = React.lazy(() => import("pages/Shop"));
 
 const App = () => {

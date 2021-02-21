@@ -1,7 +1,7 @@
 // @flow
 import cn from "classnames";
+import { CustomLink } from "common/components/Link";
 import React from "react";
-import { Link } from "react-router-dom";
 import "./index.less";
 
 type TProps = {
@@ -10,8 +10,8 @@ type TProps = {
 
 export const Logo = ({ className }: TProps): React$Node => {
     return (
-        <Link className={cn("logo", className)} to="/">
-            <img className="logo__img" src="images/logo.jpg" alt="Logo" />
-        </Link>
+        <CustomLink className={cn("logo", className)} url="/">
+            <img className="logo__img" src="/images/logo.jpg" alt="Logo" />
+        </CustomLink>
     );
 };

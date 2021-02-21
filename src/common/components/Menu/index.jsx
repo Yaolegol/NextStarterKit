@@ -1,5 +1,6 @@
 // @flow
 import cn from "classnames";
+import { CustomLink } from "common/components/Link";
 import { MenuItem } from "common/components/Menu/MenuItem";
 import { actionLogout } from "modules/Auth/actions";
 import { actionHideMobileMenu } from "modules/MobileMenu/actions";
@@ -8,7 +9,6 @@ import { selectUser } from "modules/User/selectors";
 import React, { useCallback, useMemo } from "react";
 import { FormattedMessage } from "react-intl";
 import { useDispatch, useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
 import "./index.less";
 
 type TProps = {
@@ -35,15 +35,15 @@ export const Menu = ({ className }: TProps): React$Node => {
         return (
             <>
                 <button onClick={hideMobileMenu}>
-                    <NavLink
+                    <CustomLink
                         activeClassName="menu__link_active"
                         className="menu__link"
-                        to="/admin"
+                        url="/admin"
                     >
                         <MenuItem>
                             <FormattedMessage id="common.menu.adminDashboard" />
                         </MenuItem>
-                    </NavLink>
+                    </CustomLink>
                 </button>
             </>
         );
@@ -53,15 +53,15 @@ export const Menu = ({ className }: TProps): React$Node => {
         return (
             <>
                 <button onClick={hideMobileMenu}>
-                    <NavLink
+                    <CustomLink
                         activeClassName="menu__link_active"
                         className="menu__link"
-                        to="/profile"
+                        url="/profile"
                     >
                         <MenuItem>
                             <FormattedMessage id="common.menu.profile" />
                         </MenuItem>
-                    </NavLink>
+                    </CustomLink>
                 </button>
                 <button className="menu__button" onClick={logout}>
                     <MenuItem>
@@ -76,26 +76,26 @@ export const Menu = ({ className }: TProps): React$Node => {
         return (
             <>
                 <button onClick={hideMobileMenu}>
-                    <NavLink
+                    <CustomLink
                         activeClassName="menu__link_active"
                         className="menu__link"
-                        to="/signup"
+                        url="/signup"
                     >
                         <MenuItem>
                             <FormattedMessage id="common.menu.signUp" />
                         </MenuItem>
-                    </NavLink>
+                    </CustomLink>
                 </button>
                 <button onClick={hideMobileMenu}>
-                    <NavLink
+                    <CustomLink
                         activeClassName="menu__link_active"
                         className="menu__link"
-                        to="/login"
+                        url="/login"
                     >
                         <MenuItem>
                             <FormattedMessage id="common.menu.logIn" />
                         </MenuItem>
-                    </NavLink>
+                    </CustomLink>
                 </button>
             </>
         );
@@ -104,27 +104,27 @@ export const Menu = ({ className }: TProps): React$Node => {
     return (
         <div className={cn("menu", className)}>
             <button onClick={hideMobileMenu}>
-                <NavLink
+                <CustomLink
                     activeClassName="menu__link_active"
                     exact={true}
                     className="menu__link"
-                    to="/"
+                    url="/"
                 >
                     <MenuItem>
                         <FormattedMessage id="common.menu.mainPage" />
                     </MenuItem>
-                </NavLink>
+                </CustomLink>
             </button>
             <button onClick={hideMobileMenu}>
-                <NavLink
+                <CustomLink
                     activeClassName="menu__link_active"
                     className="menu__link"
-                    to="/shop"
+                    url="/shop"
                 >
                     <MenuItem>
                         <FormattedMessage id="common.menu.shopPage" />
                     </MenuItem>
-                </NavLink>
+                </CustomLink>
             </button>
             {user && user.admin ? adminLinks : null}
             {user ? registeredLinks : unregisteredLinks}

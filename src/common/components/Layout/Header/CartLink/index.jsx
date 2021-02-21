@@ -1,10 +1,10 @@
 // @flow
 import cn from "classnames";
+import { CustomLink } from "common/components/Link";
 import CartIcon from "icons/cart.svg";
 import { selectCartProductsTotal } from "modules/Cart/selectors";
 import React from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 import "./index.less";
 
 type TProps = {
@@ -13,7 +13,7 @@ type TProps = {
 
 const CartLink = ({ cartProductsTotal }: TProps): React$Node => {
     return (
-        <Link className="cart-link" to="/cart">
+        <CustomLink className="cart-link" url="/cart">
             <div className="cart-link__icon-container">
                 <CartIcon className="cart-link__icon" />
                 <span
@@ -27,7 +27,7 @@ const CartLink = ({ cartProductsTotal }: TProps): React$Node => {
                     {cartProductsTotal}
                 </span>
             </div>
-        </Link>
+        </CustomLink>
     );
 };
 
