@@ -5,6 +5,7 @@ import { CreateProduct } from "modules/Admin/components/CreateProduct";
 import { ViewOrders } from "modules/Admin/components/ViewOrders";
 import React, { useCallback, useMemo, useState } from "react";
 import { FormattedMessage } from "react-intl";
+import "styles/index.less";
 import "./index.less";
 
 const AdminPage = (): React$Node => {

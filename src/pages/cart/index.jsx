@@ -15,7 +15,7 @@ import {Formik} from "formik";
 import React, {useCallback, useMemo} from "react";
 import {FormattedMessage} from "react-intl";
 import {connect} from "react-redux";
-import {useHistory} from "react-router-dom";
+import "styles/index.less";
 import "./index.less";
 
 type TProps = {
@@ -25,8 +25,6 @@ type TProps = {
 };
 
 const CartPage = ({cartProductsData, dispatch, user}: TProps): React$Node => {
-    const history = useHistory();
-
     const contentItems = useMemo(() => {
         return cartProductsData.map(
             ({
@@ -82,7 +80,7 @@ const CartPage = ({cartProductsData, dispatch, user}: TProps): React$Node => {
             ).then(({errors}) => {
                 if (!errors) {
                     dispatch(actionResetCart());
-                    history.push("/");
+                    window.location.href = "/";
                 }
             });
         },

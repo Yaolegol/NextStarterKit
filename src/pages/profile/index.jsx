@@ -8,6 +8,7 @@ import {selectUserPurchases} from "modules/User/selectors";
 import React, {useEffect, useMemo} from "react";
 import {FormattedMessage} from "react-intl";
 import {useDispatch, useSelector} from "react-redux";
+import "styles/index.less";
 import "./index.less";
 
 const ProfilePage = (): React$Node => {

@@ -11,12 +11,11 @@ import {Formik} from "formik";
 import React from "react";
 import {FormattedMessage} from "react-intl";
 import {useDispatch} from "react-redux";
-import {useHistory} from "react-router-dom";
+import "styles/index.less";
 import "./index.less";
 
 const LogIn = (): React$Node => {
     const dispatch = useDispatch();
-    const history = useHistory();
 
     return (
         <CustomIntl>
@@ -37,7 +36,7 @@ const LogIn = (): React$Node => {
                                         ({errors}) => {
                                             if (!errors) {
                                                 dispatch(actionGetUser());
-                                                history.push("/");
+                                                window.location.href = "/";
                                             } else {
                                                 errors.forEach(
                                                     ({key, message}) => {
