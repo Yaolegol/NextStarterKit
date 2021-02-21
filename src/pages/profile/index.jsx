@@ -1,12 +1,13 @@
 // @flow
-import { Layout } from "common/components/Layout";
-import { OrderHeader } from "common/components/Order/OrderHeader";
-import { OrderItem } from "common/components/Order/OrderItem";
-import { actionGetUser } from "modules/User/actions";
-import { selectUserPurchases } from "modules/User/selectors";
-import React, { useEffect, useMemo } from "react";
-import { FormattedMessage } from "react-intl";
-import { useDispatch, useSelector } from "react-redux";
+import {CustomIntl} from "app/components/CustomIntl";
+import {Layout} from "common/components/Layout";
+import {OrderHeader} from "common/components/Order/OrderHeader";
+import {OrderItem} from "common/components/Order/OrderItem";
+import {actionGetUser} from "modules/User/actions";
+import {selectUserPurchases} from "modules/User/selectors";
+import React, {useEffect, useMemo} from "react";
+import {FormattedMessage} from "react-intl";
+import {useDispatch, useSelector} from "react-redux";
 import "./index.less";
 
 const ProfilePage = (): React$Node => {
@@ -15,8 +16,8 @@ const ProfilePage = (): React$Node => {
 
     const contentItems = useMemo(() => {
         return userPurchases.map((purchase) => {
-            return purchase.map(({ _id, count, productID, price, sum }) => {
-                const { description, images, title } = productID;
+            return purchase.map(({_id, count, productID, price, sum}) => {
+                const {description, images, title} = productID;
                 return (
                     <OrderItem
                         countInCart={count}
@@ -35,7 +36,7 @@ const ProfilePage = (): React$Node => {
     const content = useMemo(() => {
         return contentItems.length ? (
             <div className="profile-page__content-section">
-                <OrderHeader />
+                <OrderHeader/>
                 <div className="profile-page__content-container">
                     {contentItems}
                 </div>
@@ -48,17 +49,19 @@ const ProfilePage = (): React$Node => {
     }, [dispatch]);
 
     return (
-        <Layout>
-            <div className="profile-page">
-                <h1 className="profile-page__title">
-                    <FormattedMessage id="profile.title" />
-                </h1>
-                <h4 className="profile-page__orders-history-title">
-                    <FormattedMessage id="profile.ordersHistory" />
-                </h4>
-                {content}
-            </div>
-        </Layout>
+        <CustomIntl>
+            <Layout>
+                <div className="profile-page">
+                    <h1 className="profile-page__title">
+                        <FormattedMessage id="profile.title"/>
+                    </h1>
+                    <h4 className="profile-page__orders-history-title">
+                        <FormattedMessage id="profile.ordersHistory"/>
+                    </h4>
+                    {content}
+                </div>
+            </Layout>
+        </CustomIntl>
     );
 };
 
